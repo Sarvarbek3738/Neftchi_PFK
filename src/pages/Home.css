@@ -1,0 +1,105 @@
+.hero {
+  background: linear-gradient(135deg, #003087 0%, #004bb5 60%, #FFD700 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  background: #FFD700;
+  color: #003087;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+}
+
+.section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: #003087;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.btn-all {
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 2px solid #003087;
+  color: #003087;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-all:hover {
+  background: #003087;
+  color: #FFD700;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .section {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+  }
+
+  .matches-grid {
+    grid-template-columns: 1fr;
+  }
+}

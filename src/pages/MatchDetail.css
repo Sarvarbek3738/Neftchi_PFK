@@ -1,0 +1,242 @@
+.detail-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.detail-header {
+  background: linear-gradient(135deg, #003087, #004bb5);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  display: block;
+  width: fit-content;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.detail-league {
+  font-size: 0.85rem;
+  background: #FFD700;
+  color: #003087;
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.detail-teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.detail-vs {
+  background: #FFD700;
+  color: #003087;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.detail-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  flex-wrap: wrap;
+}
+
+.detail-body {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.detail-body h2 {
+  color: #003087;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sector-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.sector-card:hover {
+  border-color: #003087;
+}
+
+.sector-card.active {
+  border-color: #FFD700;
+  background: #fffbe6;
+  box-shadow: 0 0 0 3px rgba(255,215,0,0.3);
+}
+
+.sector-name {
+  font-weight: 700;
+  color: #003087;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.sector-price {
+  color: #28a745;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.sector-available {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.ticket-order {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.ticket-order h3 {
+  color: #003087;
+  margin-bottom: 1rem;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.qty-control button {
+  background: #003087;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.qty-control span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: center;
+}
+
+.order-total {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.order-total strong {
+  color: #003087;
+  font-size: 1.3rem;
+}
+
+.btn-add-cart {
+  background: #FFD700;
+  color: #003087;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background 0.2s;
+}
+
+.btn-add-cart:hover {
+  background: #e6c200;
+}
+
+.btn-view-cart {
+  background: #003087;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-view-cart:hover {
+  background: #004bb5;
+}
+
+.not-found {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .detail-teams {
+    font-size: 1.1rem;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .detail-meta {
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .detail-body {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .sectors-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .btn-add-cart,
+  .btn-view-cart {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

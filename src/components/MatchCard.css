@@ -1,0 +1,99 @@
+.match-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.match-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.match-league {
+  font-size: 0.8rem;
+  color: #fff;
+  background: #003087;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.team {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #003087;
+  flex: 1;
+}
+
+.team.away {
+  text-align: right;
+}
+
+.vs {
+  background: #FFD700;
+  color: #003087;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.match-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.match-prices {
+  font-size: 0.9rem;
+  color: #28a745;
+  font-weight: 600;
+}
+
+.btn-buy {
+  background: #003087;
+  color: #FFD700;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-buy:hover {
+  background: #004bb5;
+}
+
+@media (max-width: 600px) {
+  .match-teams {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .team.away {
+    text-align: left;
+  }
+
+  .vs {
+    align-self: center;
+  }
+}
