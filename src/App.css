@@ -1,11 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f5f7fa;
   color: #222;
+  min-height: 100vh;
 }
+
+.dark-app {
+  background: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+body:has(.dark-app) {
+  background: #121212;
+}
+
+.dark-app .match-card,
+.dark-app .cart-item,
+.dark-app .cart-summary,
+.dark-app .checkout-form-wrap,
+.dark-app .checkout-summary,
+.dark-app .sector-card,
+.dark-app .ticket-order,
+.dark-app .profile-header,
+.dark-app .order-card,
+.dark-app .admin-form-wrap,
+.dark-app .admin-matches,
+.dark-app .stat-card,
+.dark-app .login-card {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-app .match-league { background: #016d28; }
+.dark-app .team { color: #FFD700; }
+.dark-app .section h2,
+.dark-app .matches-header h1,
+.dark-app .detail-body h2,
+.dark-app .cart-header h1,
+.dark-app .checkout-page h1,
+.dark-app .profile-header h1,
+.dark-app .profile-body h2,
+.dark-app .admin-matches h2,
+.dark-app .admin-form-wrap h2,
+.dark-app .checkout-form h2 { color: #FFD700; }
+
+.dark-app input {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+.dark-app .matches-page,
+.dark-app .home { background: #121212; }

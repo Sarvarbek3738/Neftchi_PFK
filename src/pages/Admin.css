@@ -1,0 +1,245 @@
+.admin-page {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.admin-header {
+  background: #014D1C;
+  color: white;
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.admin-header h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+  color: #FFD700;
+}
+
+.admin-header p { opacity: 0.8; font-size: 0.85rem; }
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.admin-tabs button {
+  padding: 8px 16px;
+  border: 2px solid #014D1C;
+  background: transparent;
+  color: #014D1C;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.admin-tabs button.active {
+  background: #014D1C;
+  color: #FFD700;
+}
+
+/* O'yinlar tab */
+.admin-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .admin-body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .admin-form-wrap { width: 280px; flex-shrink: 0; }
+  .admin-matches { flex: 1; }
+}
+
+.admin-form-wrap {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.admin-form-wrap h2 {
+  color: #014D1C;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.admin-form input {
+  padding: 10px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  width: 100%;
+}
+
+.admin-form input:focus { border-color: #014D1C; }
+
+.admin-form button {
+  background: #014D1C;
+  color: #FFD700;
+  border: none;
+  padding: 11px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.admin-matches {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.admin-matches h2 {
+  color: #014D1C;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.admin-match-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 0.5rem;
+}
+
+.admin-match-row:last-child { border-bottom: none; }
+
+.admin-match-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-match-row strong {
+  color: #014D1C;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-match-row span {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.btn-delete:hover { background: #ffe0e0; }
+
+/* Statistika */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+@media (min-width: 600px) {
+  .admin-stats { grid-template-columns: repeat(4, 1fr); }
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.stat-icon { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.stat-value { font-size: 1.5rem; font-weight: 800; color: #014D1C; margin-bottom: 0.2rem; }
+.stat-label { font-size: 0.78rem; color: #888; }
+
+/* Buyurtmalar */
+.admin-orders { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.admin-orders h2 {
+  color: #014D1C;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-order-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.order-top {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.order-id { font-weight: 700; color: #014D1C; font-size: 0.9rem; }
+.order-date { font-size: 0.78rem; color: #888; }
+.order-email {
+  font-size: 0.78rem;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+.order-total-badge {
+  margin-left: auto;
+  background: #e8f5e9;
+  color: #014D1C;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.admin-order-item {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 4px 0;
+  border-top: 1px solid #f5f5f5;
+}
+
+.no-data { color: #888; text-align: center; padding: 2rem; }
+
+@media (max-width: 480px) {
+  .admin-tabs button { padding: 7px 12px; font-size: 0.82rem; }
+  .stat-value { font-size: 1.2rem; }
+  .order-email { max-width: 100px; }
+}

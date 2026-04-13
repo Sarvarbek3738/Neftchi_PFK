@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "my-loyha"
+  },
+  "targets": {
+    "my-loyha": {
+      "hosting": {
+        "neftchi-tickets": [
+          "neftchi-tickets"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

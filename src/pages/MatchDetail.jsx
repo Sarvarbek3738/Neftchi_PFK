@@ -1,17 +1,21 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { matches } from "../data/matches";
+import { useTranslation } from "react-i18next";
+import { useMatches } from "../hooks/useMatches";
 import "./MatchDetail.css";
 
 export default function MatchDetail({ addToCart }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const match = matches.find((m) => m.id === parseInt(id));
+  const { t } = useTranslation();
+  const { matches } = useMatches();
   const [selected, setSelected] = useState(null);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
 
-  if (!match) return <div className="not-found">O'yin topilmadi</div>;
+  const match = matches.find((m) => String(m.firestoreId) === id || String(m.id) === id);
+
+  if (!match) return <div className="not-found">Yuklanmoqda...</div>;
 
   const formatDate = (dateStr) => {
     const d = new Date(dateStr);
@@ -28,7 +32,6 @@ export default function MatchDetail({ addToCart }) {
   return (
     <div className="detail-page">
       <div className="detail-header">
-        <button className="back-btn" onClick={() => navigate(-1)}>← Orqaga</button>
         <div className="detail-league">{match.league}</div>
         <div className="detail-teams">
           <span>{match.home}</span>
@@ -43,37 +46,35 @@ export default function MatchDetail({ addToCart }) {
       </div>
 
       <div className="detail-body">
-        <h2>Sektor tanlang</h2>
+        <h2>{t("selectSector")}</h2>
         <div className="sectors-grid">
           {match.sectors.map((sector) => (
-            <div
-              key={sector.id}
+            <div key={sector.id}
               className={`sector-card ${selected?.id === sector.id ? "active" : ""}`}
-              onClick={() => setSelected(sector)}
-            >
+              onClick={() => setSelected(sector)}>
               <div className="sector-name">{sector.name}</div>
               <div className="sector-price">{sector.price.toLocaleString()} so'm</div>
-              <div className="sector-available">{sector.available} joy mavjud</div>
+              <div className="sector-available">{sector.available} {t("available")}</div>
             </div>
           ))}
         </div>
 
         {selected && (
           <div className="ticket-order">
-            <h3>Chipta soni</h3>
+            <h3>{t("ticketCount")}</h3>
             <div className="qty-control">
               <button onClick={() => setQty(Math.max(1, qty - 1))}>−</button>
               <span>{qty}</span>
               <button onClick={() => setQty(Math.min(selected.available, qty + 1))}>+</button>
             </div>
             <div className="order-total">
-              Jami: <strong>{(selected.price * qty).toLocaleString()} so'm</strong>
+              {t("total")}: <strong>{(selected.price * qty).toLocaleString()} so'm</strong>
             </div>
-            <button className="btn-add-cart" onClick={handleAdd}>
-              {added ? "✅ Savatga qo'shildi!" : "Savatga qo'shish"}
+            <button className="btn-add-cart" onClick={handleAdd} disabled={added}>
+              {added ? t("added") : t("addToCart")}
             </button>
             <button className="btn-view-cart" onClick={() => navigate("/cart")}>
-              Savatni ko'rish 🛒
+              {t("viewCart")}
             </button>
           </div>
         )}
