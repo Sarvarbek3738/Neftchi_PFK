@@ -17,10 +17,7 @@ export default function MatchDetail({ addToCart }) {
 
   if (!match) return <div className="not-found">Yuklanmoqda...</div>;
 
-  const formatDate = (dateStr) => {
-    const d = new Date(dateStr);
-    return d.toLocaleDateString("uz-UZ", { day: "numeric", month: "long", year: "numeric" });
-  };
+  const formatDate = (dateStr) => dateStr;
 
   const handleAdd = () => {
     if (!selected) return;
@@ -53,7 +50,7 @@ export default function MatchDetail({ addToCart }) {
               className={`sector-card ${selected?.id === sector.id ? "active" : ""}`}
               onClick={() => setSelected(sector)}>
               <div className="sector-name">{sector.name}</div>
-              <div className="sector-price">{sector.price.toLocaleString()} so'm</div>
+              <div className="sector-price">{sector.price.toLocaleString()} {t("som")}</div>
               <div className="sector-available">{sector.available} {t("available")}</div>
             </div>
           ))}
@@ -68,7 +65,7 @@ export default function MatchDetail({ addToCart }) {
               <button onClick={() => setQty(Math.min(selected.available, qty + 1))}>+</button>
             </div>
             <div className="order-total">
-              {t("total")}: <strong>{(selected.price * qty).toLocaleString()} so'm</strong>
+              {t("total")}: <strong>{(selected.price * qty).toLocaleString()} {t("som")}</strong>
             </div>
             <button className="btn-add-cart" onClick={handleAdd} disabled={added}>
               {added ? t("added") : t("addToCart")}

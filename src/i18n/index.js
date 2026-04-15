@@ -43,6 +43,7 @@ const resources = {
       profile: "Profil",
       orderHistory: "Buyurtmalar tarixi",
       darkMode: "Tungi rejim",
+      som: "so'm",
     },
   },
   ru: {
@@ -86,6 +87,7 @@ const resources = {
       profile: "Профиль",
       orderHistory: "История заказов",
       darkMode: "Тёмная тема",
+      som: "сум",
     },
   },
   en: {
@@ -129,6 +131,7 @@ const resources = {
       profile: "Profile",
       orderHistory: "Order History",
       darkMode: "Dark Mode",
+      som: "sum",
     },
   },
 };

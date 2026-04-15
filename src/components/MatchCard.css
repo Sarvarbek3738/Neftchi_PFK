@@ -30,13 +30,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  overflow: hidden;
 }
 
 .team {
   font-size: 1rem;
   font-weight: 700;
   color: #014D1C;
-  flex: 1;
+  flex: 0 1 auto;
+  background: transparent;
 }
 
 .team.away { text-align: right; }

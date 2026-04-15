@@ -22,7 +22,6 @@ body:has(.dark-app) {
 .dark-app .cart-summary,
 .dark-app .checkout-form-wrap,
 .dark-app .checkout-summary,
-.dark-app .sector-card,
 .dark-app .ticket-order,
 .dark-app .profile-header,
 .dark-app .order-card,
@@ -34,9 +33,24 @@ body:has(.dark-app) {
   color: #e0e0e0;
 }
 
+.dark-app .sector-card {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+.dark-app .sector-card.active {
+  background: #1a3a1a;
+  border-color: #FFD700;
+}
+
+.dark-app .sector-name { color: #FFD700; }
+.dark-app .detail-page { background: #121212; }
+.dark-app .detail-body { background: transparent; }
+.dark-app .ticket-order { background: #1e1e1e; color: #e0e0e0; }
+
 .dark-app .match-league { background: #016d28; }
-.dark-app .team { color: #FFD700; }
-.dark-app .section h2,
+.dark-app .team { color: #FFD700; background: transparent; }
 .dark-app .matches-header h1,
 .dark-app .detail-body h2,
 .dark-app .cart-header h1,

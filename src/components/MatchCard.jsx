@@ -6,10 +6,7 @@ export default function MatchCard({ match }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const formatDate = (dateStr) => {
-    const d = new Date(dateStr);
-    return d.toLocaleDateString("uz-UZ", { day: "numeric", month: "long", year: "numeric" });
-  };
+  const formatDate = (dateStr) => dateStr;
 
   return (
     <div className="match-card">
@@ -25,7 +22,7 @@ export default function MatchCard({ match }) {
         <span>📍 {match.stadium}</span>
       </div>
       <div className="match-prices">
-        💰 {Math.min(...match.sectors.map(s => s.price)).toLocaleString()} {t("from")}
+        💰 {Math.min(...match.sectors.map(s => s.price)).toLocaleString()} {t("som")} {t("from")}
       </div>
       <button className="btn-buy" onClick={() => navigate(`/match/${match.firestoreId || match.id}`)}>
         {t("buyTicket")}
