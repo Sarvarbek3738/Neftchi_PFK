@@ -69,3 +69,41 @@ body:has(.dark-app) {
 
 .dark-app .matches-page,
 .dark-app .home { background: #121212; }
+
+.dark-app .otp-card {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-app .otp-card h2 { color: #FFD700; }
+.dark-app .otp-card p { color: #aaa; }
+.dark-app .otp-inputs input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #FFD700;
+}
+.dark-app .otp-inputs input:focus { border-color: #FFD700; }
+.dark-app .otp-resend { color: #aaa; }
+.dark-app .btn-back-otp { border-color: #444; color: #aaa; background: transparent; }
+.dark-app .payment-loading { background: #121212; }
+.dark-app .payment-loading h2 { color: #FFD700; }
+.dark-app .payment-loading p { color: #aaa; }
+.dark-app .payment-progress { background: #333; }
+
+.dark-app .otp-card {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-app .otp-card h2 { color: #FFD700; }
+.dark-app .otp-card p { color: #aaa; }
+.dark-app .otp-inputs input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #FFD700;
+}
+.dark-app .otp-inputs input:focus { border-color: #FFD700; }
+.dark-app .otp-resend { color: #aaa; }
+.dark-app .btn-back-otp { border-color: #444; color: #aaa; background: transparent; }
+.dark-app .payment-loading { background: #121212; }
+.dark-app .payment-loading h2 { color: #FFD700; }
